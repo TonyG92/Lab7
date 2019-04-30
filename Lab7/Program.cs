@@ -127,14 +127,14 @@ namespace Lab7
         }
         public static bool ValidatePhone(string number)
         {
-            bool regexNumber = Regex.IsMatch(number, @"([0-9]{0,3})\-[0-9]{0,3}\-[0-9]{0,4}");
+            bool regexNumber = Regex.IsMatch(number, @"([0-9]{3})\-[0-9]{3}\-[0-9]{4}");
 
             return regexNumber;
         }
 
         public static bool ValidateDate(string date)
         {
-            bool regexDate = Regex.IsMatch(date, @"(([0-2][0-9])|([1-9])|(3[0-1]))/((1[0-2])|([1-9]))/[0-9]{4}");
+            bool regexDate = Regex.IsMatch(date, @"(([0-3]{1})([0-9]{1})(/)([0-1]{1})([0-9]{1})(/)([0-9]){4})");
 
             return regexDate;
         }
